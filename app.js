@@ -6,6 +6,8 @@ var app = express();
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+let port = process.env.PORT || 8080
+
 app.get('/', function (req, res) {
     res.render('home');
 });
@@ -18,4 +20,4 @@ app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
  
-app.listen(3000);
+app.listen(port);
