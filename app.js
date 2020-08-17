@@ -26,11 +26,11 @@ app.post('/paymentcreate',payment.createPreference);
 
 app.get('/paymentsuccess', (req, res) => res.render('success', req.query))
 
-app.get('/paymentfailure',(req,res) => res.render('failure'));
+app.get('/paymentfailure',(req,res) => res.render('failure', req.query));
 
-app.get('/paymentpending',(req, res) => res.render('pending'));
+app.get('/paymentpending',(req, res) => res.render('pending', req.query));
 
-app.post('/notification', (req,res) => res.json(req.body))
+app.post('/notification', (req,res) => console.log(req.body))
 
 // Fin rutas de pago
 

@@ -18,6 +18,17 @@
     </div>
     <p>El pago ha sido rechazado.</p>
     <div>
-        
+        <ul>
+            <li>ID del pago de Mercado Pago: {{ collection_id }}</li>
+            <li>Estado del pago: {{ collection_status }}</li>
+            <li>Valor del campo external_reference que hayas enviado a la hora de crear la preferencia de pago: {{external_reference}}</li>
+            <li>Tipo de pago: {{payment_type}}</li>
+            <li>ID de la orden de pago generada en Mercado Pago: {{merchant_order_id}}</li>
+            <li>ID de la preferencia de pago de la que se está retornando: {{preference_id}}</li>
+            <li>ID del país de la cuenta de Mercado Pago del vendedor: {{site_id}}</li>
+            <li>Valor aggregator: {{processing_mode}}</li>
+            <li>Merchant account ID (null): {{merchant_account_id}}</li>
+
+        </ul>
     </div>
 </div>
