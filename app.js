@@ -30,7 +30,10 @@ app.get('/paymentfailure',(req,res) => res.render('failure', req.query));
 
 app.get('/paymentpending',(req, res) => res.render('pending', req.query));
 
-app.post('/notification', (req,res) => console.log(req.body))
+app.post('/notification', (req,res) => {
+    console.log(req.body)
+    res.status(200);
+})
 
 // Fin rutas de pago
 
