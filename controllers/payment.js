@@ -4,7 +4,8 @@ const mercadopago = require ('mercadopago');
 
 // Agrego credenciales
 mercadopago.configure({
-    access_token: 'TEST-4107070442958768-081007-06f8f4a63921dc78a23aee8b2457bf83__LD_LA__-67593662'
+    access_token: 'APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398',
+    integrator_id: 'dev_24c65fb163bf11ea96500242ac130004'
 })
 
 
@@ -23,12 +24,39 @@ const createPreference = async (req, res) => {
                 quantity: Number(req.body.unit),
             }
         ],
+        payer: {
+            name: "Lalo",
+            surname: "Landa",
+            email: "test_user_63274575@testuser.com",
+            phone: {
+                area_code: "11",
+                number: 22223333
+            },
+            address: {
+                street_name: "False",
+                street_number: 123,
+                zip_code: "1111"
+            }
+        }
+        ,
         back_urls: {
             success: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentsuccess',
             faulure: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentfailure',
             pending: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentpending',
         },
-        auto_return: 'all', 
+        auto_return: 'approved',
+        payment_methods: {
+            excluded_payment_methods: [
+                {
+                    id: 'amex'
+                }
+            ],
+            excluded_payment_types: [
+                {
+                    id: 'atm'
+                }
+            ]
+        } ,
         external_reference: 'greche@digitalhouse.com',
         
         
