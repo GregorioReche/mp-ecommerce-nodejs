@@ -58,6 +58,7 @@ const createPreference = async (req, res) => {
                 }
             ]
         } ,
+        installments: 6,
         external_reference: 'greche@digitalhouse.com',
         
         
