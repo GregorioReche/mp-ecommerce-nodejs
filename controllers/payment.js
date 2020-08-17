@@ -1,4 +1,5 @@
 const path = require('path');
+const fullPath = 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/';
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
 
@@ -19,7 +20,7 @@ const createPreference = async (req, res) => {
                 ID: 1234,
                 title: req.body.title,
                 description: 'Dispositivo Movil de Tienda e-commerce',
-                picture_url: path.resolve(fullUrl,req.body.img),
+                picture_url: path.resolve(fullPath,req.body.img),
                 unit_price: Number(req.body.price),
                 quantity: Number(req.body.unit),
             }
