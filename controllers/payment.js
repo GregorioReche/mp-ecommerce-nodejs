@@ -64,8 +64,8 @@ const createPreference = async (req, res) => {
     };
     try {
         const respuesta = await mercadopago.preferences.create(preference);
-        return res.json(respuesta);
-        //return res.redirect(respuesta.response.sandbox_init_point)
+        //return res.json(respuesta);
+        return res.redirect(respuesta.response.init_point)
         
     } catch (error) {
         console.log(error);
@@ -73,12 +73,7 @@ const createPreference = async (req, res) => {
 
 
 }
-const success = (req, res) => res.status(200).send('Pago aprobado.');
-
-const failure = (req,res) => res.status(200).send('El pago no pudo realizarse. Vuelve a internatlo mas tarde');
-
-const pending = (req,res) => res.status(200).send('El pago quedó pendinete');
 
 
 
-module.exports = {createPreference, success, failure, pending}
+module.exports = {createPreference}

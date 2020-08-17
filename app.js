@@ -24,11 +24,11 @@ app.get('/detail', function (req, res) {
 
 app.post('/paymentcreate',payment.createPreference);
 
-app.get('/paymentsuccess',payment.success);
+app.get('paymentsuccess', (req, res) => res.render('success', req.query))
 
-app.get('/paymentfailure',payment.failure);
+app.get('/paymentfailure',(req,res) => res.render(failure));
 
-app.get('/paymentpending',payment.pending);
+app.get('/paymentpending',(req, res) => res.render(pending));
 
 // Fin rutas de pago
 
