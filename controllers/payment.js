@@ -56,9 +56,10 @@ const createPreference = async (req, res) => {
                 {
                     id: 'atm'
                 }
-            ]
-        } ,
-        installments: 6,
+            ],
+            installments: 6,
+        },
+        notification_url: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/notification',
         external_reference: 'greche@digitalhouse.com',
         
         
