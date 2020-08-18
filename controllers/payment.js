@@ -42,7 +42,7 @@ const createPreference = async (req, res) => {
         ,
         back_urls: {
             success: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentsuccess',
-            faulure: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentfailure',
+            failure: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentfailure',
             pending: 'https://gregoreche-mp-ecommerce-nodejs.herokuapp.com/paymentpending',
         },
         auto_return: 'approved',
