@@ -19,7 +19,7 @@ const createPreference = async (req, res) => {
             {   
                 ID: 1234,
                 title: req.body.title,
-                description: 'Dispositivo Movil de Tienda e-commerce',
+                description: 'Dispositivo móvil de Tienda e-commerce',
                 picture_url: path.join(fullPath,req.body.img),
                 unit_price: Number(req.body.price),
                 quantity: Number(req.body.unit),

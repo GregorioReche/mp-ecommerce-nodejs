@@ -1,18 +1,23 @@
-{ action: 'payment.created', 
-    pi_version: 'v1',
-    data: { id: '8937276892' },
-    date_created: 'id: 6296742056,
-    live_mode: true,
-    type: 'payment',
-    user_id: '469485398'
-    }
-    {
-    resource: 'https://api.mercadolibre.com/collections/notifications/8937276892',
-    topic: 'payment'
-    }
-    {
-    resource: 'https://api.mercadolibre.com/merchant_orders/1689467966',
-    topic: 'merchant_order'
-    }
-    {
-    action: 'payment
+{
+    "resource": "https://api.mercadolibre.com/merchant_orders/1689999228",
+    "topic": "merchant_order"
+    
+}
+{
+    "resource": "https://api.mercadolibre.com/collections/notifications/8966690188",
+    "topic": "payment"
+}
+{
+    "action": "payment.created",
+    "api_version": "v1",
+    "data": { "id": 8966690188 },
+    "date_created": "2020-08-18T01:24:34Z",
+    "id": 6297462326,
+    "live_mode": true,
+    "type": "payment",
+    "user_id": 469485398
+}
+{
+    "resource": "https://api.mercadolibre.com/merchant_orders/1689999228",
+    "topic": "merchant_order"
+}
